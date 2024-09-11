@@ -1,0 +1,49 @@
+{% extends "users/base_user.html" %}
+{% load static %}
+
+{% block content %}
+<body>
+    <div class="profile">
+        <div class="profile-img">
+            <img src="{{ MEDIA_URL }}user_documents/profile5.webp" alt="Profile Picture">
+        </div>
+        <form>
+          {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Name:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1">{{user.username}} </textarea>
+              </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="{{ user.email }}">
+              
+            </div>
+            <div class="form-group">
+              <label for="Names">Full Names </label>
+              <input type="text" name="title" class="form-control" id="names" placeholder="{{user.username}}">
+          </div>
+          <div class="form-group">
+              <label for="description">Location </label>
+              <input type="text" name="description" class="form-control" id="Bio" placeholder="Write more about yourself">
+          </div>
+          <div class="form-group">
+              <label for="experience">Years of Experience:</label>
+              <input type="number" name="experience" class="form-control" id="experience" placeholder="eg: 1">
+          </div>
+          <button type="submit" class="btn btn-success">Add to Profile</button>
+          </form> 
+        
+          
+        <div class="profile_bottom">
+            <a href="{% url 'register_upload' %}"><h4>Finish registration</h4></a> 
+            <a href="{% url 'register_upload' %}"><i class="fa-solid fa-arrow-right fa-fade fa-xl"></i></a> 
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+{% endblock %}

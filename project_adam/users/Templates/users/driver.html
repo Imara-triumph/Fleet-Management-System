@@ -1,0 +1,178 @@
+{% extends "users/base_user.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<body>
+
+    <div class="driver">
+        <div class="driver_welcome">
+            <h4>Welcome, {{user.username}}</h4> 
+            <p>Find the perfect car to suit your needs</p>
+            <p>Message a Fleetowner and get a car today!</p>
+        </div>
+        <div class="driver_welcomeimg">
+            <img src="https://thumbs.dreamstime.com/b/cars-showroom-dealers-selling-new-clients-taking-vehicles-rent-cartoon-characters-rental-automobile-customers-auto-189594419.jpg" alt="" >
+        </div>
+    </div>
+
+    <div class="listing-title" >
+        <h4>Active Vehicle Listings:</h4>
+    </div>
+    <section>
+        
+        <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="{{ MEDIA_URL }}user_documents/sedan.jpg" alt="{{listing.title}}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Honda Accord</h5>
+                  <p class="card-text">Price per day: Ksh.2,500</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Peter-griffin </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="https://image.made-in-china.com/2f0j00eDIkOwLlfVoU/Kenya-Hot-Sale-125cc-150cc-200cc-Cg-Motorbike-Cheap-Gas-Street-Motorcycle.webp" alt="vehicle_picture">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">TVS Motorbike</h5>
+                  <p class="card-text">Price per day: Ksh.800</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Peter-griffin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="https://tuktukph.top/wp-content/uploads/2023/04/TVS-King-Deluxe.jpg" alt="vehicle_picture">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Deluxe TukTuk</h5>
+                  <p class="card-text">Price per day: Ksh.1,200</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Mama Harrier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="https://www.waysoftheworldblog.com/wp-content/uploads/2023/06/Sri-Lanka-Tuk-Tuk-27.jpg" alt="vehicle_picture">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Boxer TukTuk</h5>
+                  <p class="card-text">Price per day: Ksh.1,100</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Peter-griffin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="{{ MEDIA_URL }}user_documents/sedan2.webp" alt="vehicle_picture">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Suzuki Maruti</h5>
+                  <p class="card-text">Price per day: Ksh.2,200</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Mama Harrier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="{{ MEDIA_URL }}user_documents/nissan-x-trail-1.webp" alt="vehicle_picture">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">NISSAN X-TRAIL</h5>
+                  <p class="card-text">Price per day: Ksh.5,500</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Mama Harrier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="https://senda.us/autocraft/avisnew/images/veh_images/16189724100image_1.JPG" alt="vehicle_picture">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Mark X</h5>
+                  <p class="card-text">Price per day: Ksh.3,500</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Mama Harrier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="https://loaded4x4.media/wp-content/uploads/2022/02/2016-isuzu-ute-d-max-ls-u-review-001-e1481265646635-2.jpg" alt="vehicle_picture">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">ISUZU D-MAX</h5>
+                  <p class="card-text">Price per day: Ksh.8,200</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Mama Harrier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="https://www.suzukikenya.com/images/en125hu.jpg" alt="vehicle_picture">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">SUZUKI 300</h5>
+                  <p class="card-text">Price per day: Ksh.900</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Peter-griffin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="https://dashboard.kaiandkaro.com/media/vehicles/images/WhatsApp_Image_2023-02-16_at_13.53.50.jpeg" alt="vehicle_picture">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Mazda Demio</h5>
+                  <p class="card-text">Price per day: Ksh.2,300</p>
+                  <a href="{% url 'chat-home' %}" class="btn btn-primary">message owner: Mama Harrier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+</body>
+
+
+{% endblock %}

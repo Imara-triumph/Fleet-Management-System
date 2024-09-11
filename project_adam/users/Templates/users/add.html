@@ -1,0 +1,74 @@
+{% extends "users/base_user.html" %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    <section>
+        <div class="add_start">
+            <h2> Add to your fleet by following the steps below:</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Add a picture of your vehicle</li>
+                <li class="list-group-item">Fill out vehicle details</li>
+                <li class="list-group-item">Verify vehicle details</li>
+                <li class="list-group-item">Click 'Add vehicle' to submit</li>
+            </ul>
+        </div>
+        <div>
+            <img class="add_pic" src="https://blog.getspiffy.com/hubfs/SpiffyxShellTapUp-Webcast-Blog-Header-v4.png" alt="">
+        </div>
+    </section>
+    <div class="add_forms">
+        <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">Registration Number</label>
+                {{ form.registration_number }}
+                <input type="text" class="form-control" id="inputCity" placeholder="Number plate">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputCity">Vehicle Name</label>
+                {{ form.vehicle_name }}
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Model</label>
+                  {{ form.model }}
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Chassis Number</label>
+                  {{ form.chassis_number }}
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+              </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">Price per day</label>
+                {{ form.price }}
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">Vehicle type</label>
+                {{ form.vehicle_type }}
+                <select id="inputState" class="form-control">
+                  <option selected>Choose:</option>
+                  <option>Motor Bike</option>
+                  <option>Tuk Tuk</option>
+                  <option>SUV</option>
+                  <option>Sedan</option>
+                  <option>Minivan</option>
+                  <option>Pick up Truck</option>
+                  <option>Lorry</option>
+                </select>
+              </div>
+              <input type="file" id="veicle_picture" name="vehicle_picture" {{ form.vehicle_picture }}>
+            <button type="submit" class="btn btn-primary">Add Vehicle</button>
+        </form>
+    </div>
+    
+
+</body>
+{% endblock %}

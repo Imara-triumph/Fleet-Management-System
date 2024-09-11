@@ -1,0 +1,124 @@
+{% extends "users/base_user.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<body>
+
+    <div class="owner">
+        <div class="owner_welcome">
+            <h4>Welcome, {{user.username}}</h4> 
+            <p>Add your vehicles here to get a driver</p>
+            <a href="{% url 'add' %}">Add to your fleet</a>
+        </div>
+        <div class="owner_welcomeimg">
+            <img src="https://thumbs.dreamstime.com/b/cars-showroom-dealers-selling-new-clients-taking-vehicles-rent-cartoon-characters-rental-automobile-customers-auto-189594419.jpg" alt="" >
+        </div>
+    </div>
+
+    <div class="listing-title" >
+        <h4>Active Driver Listings:</h4>
+    </div>
+    <section>
+        
+        <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="{{ MEDIA_URL }}user_documents/profile.jpg" alt="profile-img">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Sypha Wairimu</h5>
+                  <p class="card-text">Located in Mombasa</p>
+                  <a href="" class="btn btn-primary">message driver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="{{ MEDIA_URL }}user_documents/profile1.jpg" alt="profile-img">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Hassan Njoroge</h5>
+                  <p class="card-text">Located in Mombasa</p>
+                  <a href="" class="btn btn-primary">message driver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="{{ MEDIA_URL }}user_documents/profile2.jpg" alt="profile-img">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Adrian Wesonga</h5>
+                  <p class="card-text">Located in Mombasa</p>
+                  <a href="" class="btn btn-primary">message driver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="{{ MEDIA_URL }}user_documents/profile3.jpg" alt="profile-img">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Ann Wairimu</h5>
+                  <p class="card-text">Located in Mombasa</p>
+                  <a href="" class="btn btn-primary">message driver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="{{ MEDIA_URL }}user_documents/profile4.jpg" alt="profile-img">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Brian Wabonga</h5>
+                  <p class="card-text">Located in Mombasa</p>
+                  <a href="" class="btn btn-primary">message driver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 70rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img-top" src="{{ MEDIA_URL }}user_documents/profile5.jpg" alt="profile-img">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">John Kiriamiti</h5>
+                  <p class="card-text">Located in Mombasa</p>
+                  <a href="" class="btn btn-primary">message driver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+    </section>
+
+</body>
+
+
+
+{% endblock %}

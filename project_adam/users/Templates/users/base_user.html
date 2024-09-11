@@ -1,0 +1,68 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamba</title>
+
+    <link rel="stylesheet" href="{%static 'mamba/styles.css'%}">
+    <script src="https://kit.fontawesome.com/49444e842a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto+Condensed:wght@700&family=Roboto+Slab&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    
+    <nav>
+        <div class="left">
+            <h1>Mamba</h1>
+            {% if user.is_driver %}
+                <a href="{% url 'driver' %}"><button>Dashboard</button></a>
+            {% endif %}
+            {% if user.is_fleetowner %}
+                <a href="{% url 'fleetowner' %}"><button>Dashboard</button></a>
+            {% endif %}
+         
+            
+        </div>
+
+        <div class="right">
+            <p>EN</p> 
+            <div class="user_icon">         
+                <a href="{% url 'chat-home' %}"><i class="fa-regular fa-message fa-xl"></i></a>
+            </div>
+            
+            <div class="user_icon">
+                <a href="{% url 'profile' %}"><i class="fa-solid fa-user fa-xl"></i></a>
+            </div>
+            <a href="{% url 'profile' %}"><h5>{{ user.username }}</h5></a>
+            <a href="{% url 'user_logout' %}"><button>logout</button></a>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    
+
+        <footer>
+            <div class="list">
+                <h2>Company:</h2>  <br>
+                <p>Locate us at:</p>
+                <p><i class="fa-solid fa-map-pin fa-bounce fa-xl"></i></i> Tom Mboya Street Tudor, Msa P.O Box 90420-80100 MSA</p>
+
+            </div>
+    
+            <div class="lastlist">
+                <h2>Contact us:</h2><br>
+                <p><i class="fa-regular fa-envelope fa-beat-fade fa-lg"></i> bsit319j2019@students.tum.ac.ke</p>
+                <p><i class="fa-brands fa-x-twitter fa-beat-fade fa-lg"></i> </p>
+                <p><i class="fa-brands fa-instagram fa-beat-fade fa-lg"></i></p>
+    
+            </div>
+    
+           
+        </footer>
+    </body>
+    </html>

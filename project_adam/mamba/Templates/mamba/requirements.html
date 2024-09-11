@@ -1,0 +1,121 @@
+{% extends "mamba/layout.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+<section>
+    <div class="req_welcome">
+        <img src="https://media.istockphoto.com/id/1407921625/photo/happy-african-american-male-driver-driving-a-car-and-looking-through-the-car-window.jpg?s=612x612&w=0&k=20&c=XVmb5PpYC_kTeTQ2loq65Od1vuu9Nyq-vUB_vg20zRk=" alt="Driver smiling">
+    </div>
+    <div class="req_first">
+        <h1>The basics</h1>
+        <p >Most people are eligible to drive with us,</p>
+        <p>Here's what you need to know if you're driving in Nairobi or Mombasa.</p>
+    </div>
+</section>
+<div  class="divider">
+    <label> Get Started as a Driver</label>
+</div>
+
+<section>
+    <div>
+        <img class="req_list0" src="https://i.pinimg.com/736x/43/c0/47/43c04767dc84407724a508142c04e736.jpg" alt="sign up picture">
+    </div>
+    <div class="req_second">
+        <h4>1. Sign up online</h4>
+        <p>Got an email address and a smartphone?</p>
+        <p>Great, now tell us a bit more about yourself and we'll get you started.</p>
+        <a href="{% url 'register' %}"><i class="fa-solid fa-user-plus fa-bounce "></i>  Sign up</a>
+    </div>
+</section>
+<section>
+    <div>
+        <img  class="req_list1" src="https://cdn-icons-png.flaticon.com/512/564/564793.png" alt="upload docs icon">
+    </div>
+    <div class="req_second">
+        <h4>2. Upload your documents</h4>
+        <p>Time for some paperwork. There are some of the documents we need to see:</p>
+        <ul>
+            <li>- National identity card</li>
+            <li>- Valid driving license</li>
+            <li>- Profile photo</li>
+        </ul>
+    </div>
+</section>
+<section>
+    <div>
+        <img  class="req_list2" src="https://img.freepik.com/premium-vector/car-buying-concept-vector-illustration-hand-hold-car-key_662848-533.jpg" alt="get a car">
+    </div>
+    <div class="req_second">
+        <h4>3. Get assigned a vehicle</h4>
+        <p>Make sure that your vehicle is in excellent working and physical condition,</p>
+        <p>so that it meets your and standards in Kenya.</p> 
+    </div>
+</section>
+<section>
+    <div>
+        <img  class="req_list3" src="https://t3.ftcdn.net/jpg/01/02/03/80/360_F_102038045_1ropJBtqleEFaOu7V37WWpOe7ccUZM7R.jpg" alt="start driving">
+    </div>
+    <div class="req_second">
+        <h4>4. Start driving today!</h4>
+        <p>If you've completed all the above steps, congratulations!</p>
+        <p>You're ready to drive and start making money.</p>
+    </div>
+</section>
+
+<div  class="divider">
+    <label> Get Started as a Fleet owner </label>
+</div>
+
+<section>
+    <div>
+        <img class="req_list4" src="https://www.svgrepo.com/show/75351/man-with-car.svg" alt="person and car">
+    </div>
+    <div class="req_third">
+        <h4>Your must haves:</h4>
+        <ul>
+            <li>- Motor vehicle registration book</li>
+            <li>- PSV insurance</li>   
+            <li>- Vehicle inspection report</li>
+            <li>- Partner National ID</li>
+        </ul>
+</section>
+<div class="req_fourth">
+    <div>
+        <h3>Vehicle inspections</h3>
+        <p>Complete your vehicle inspection at your nearest inspection center.</p>
+    </div>
+    <div>
+        <h4>Book your inspection</h4>
+        <p>Find the nearest vehicle inspection location below and schedule an appointment.</p>
+        <p> The cost of vehicle inspection is KES 600 between 8:30 - 11AM on weekdays and KES 800 in any other operating hour.</p>
+    </div>
+    <div>
+        <h4>Complete the Inspection</h4>
+        <p>Complete your inspection on your booked time at the inspection center. There should be no damage indicated on the report.</p>
+    </div>
+    <div>
+        <h4>Upload the inspection report</h4>
+        <p>Once you pass, upload the clear / readable report to your account and ensure the vehicle registration number match the vehicle on your Uber profile. Uber does not cover repairs or maintenance to pass an inspection.</p>
+        <a href="https://www.google.com/localservices/prolist?g2lbs=ANTchaNGZd3wyvL3ZpTb_lrvKxixup8V-S8dUkbPyldSLrBa12uFekAxLZzYUInTxXp2rasPZUnNt9f-KsJenXFWlJD_ovTYOHs8klL8DM5jxEod49IpoN8Z23ZwLHhczvtgqP6OF2Yx&hl=en-KE&gl=ke&cs=1&ssta=1&q=inspection%20centers%20in%20near%20me&oq=inspection%20centers%20in%20near%20me&slp=MgA6HENoTUl1Y19jcDd5Z2dnTVZqOVYzQ2gxRVJnczJSAggCYACSAUcKDS9nLzExYnp3cXQ2cjEKDS9nLzExZnZsYnFqcGwKDC9nLzFxMnZ4aHZ0cgoNL2cvMTFmdnY3eDJ5XxIEEgIIARIECgIIAZoBBgoCFxkQAA%3D%3D&src=2&serdesk=1&sa=X&ved=2ahUKEwjridOnvKCCAxXSgf0HHUlhBu4QjGp6BAgUEAE&scp=ChtnY2lkOmNhcl9pbnNwZWN0aW9uX3N0YXRpb24SURISCaXNGoPQEkAYEX96MmqvfkCAGhIJM45ffcMMQBgRLEF4BSSBr7AiD0lzbGFuZCwgTW9tYmFzYSoUDVWGkf0V3MCgFx1MDZn9JXYcpxcwARoSaW5zcGVjdGlvbiBjZW50ZXJzIh1pbnNwZWN0aW9uIGNlbnRlcnMgaW4gbmVhciBtZSoKTU9UIENlbnRyZQ%3D%3D">Find an inspection center near you</a>
+    </div>
+</div>
+
+<section>
+    <div class="req_fifth">
+        <h3>Vehicle Solutions</h3>
+        <p>No matter what you plan to drive, we can help you find a vehicle that's right for you.</p>
+        <p>Discover the range of options available to you.</p>
+    </div>
+    <div>
+        <img class="req_list5" src="https://twotalltravellers.com/wp-content/uploads/2022/03/Tuk-Tuk-Rental-Sri-Lanka-6.jpg" alt="Tuktuk  picture">
+    </div>
+</section>
+<div class="divider">
+    <a href="{% url 'register' %}"><h2>Sign up to drive</h2></a>
+    <a href="{% url 'register' %}"><i class="fa-solid fa-arrow-right fa-fade fa-2xl"></i> </a>
+</div>
+
+{% endblock %}

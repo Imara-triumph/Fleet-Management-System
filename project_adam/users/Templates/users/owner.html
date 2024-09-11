@@ -1,0 +1,38 @@
+{% extends "users/base_user.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<body>
+
+    <div class="owner">
+        <div class="owner_welcome">
+            <h4>Welcome, {{user.username}}</h4> 
+            <p>Find the perfect car to suit your needs</p>
+            <p>Message a Fleetowner and get a car today!</p>
+        </div>
+        <div class="driver_welcomeimg">
+            <img src="https://thumbs.dreamstime.com/b/cars-showroom-dealers-selling-new-clients-taking-vehicles-rent-cartoon-characters-rental-automobile-customers-auto-189594419.jpg" alt="" >
+        </div>
+    </div>
+
+    {% for user in users %}
+      <div class="card" style="width: 70rem;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img class="card-img-top" src="{{user.profile_picture}}" alt="profile_picture">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{user.username}}</h5>
+              <p class="card-text">Price per day: {{user.price}}</p>
+              <a href="" class="btn btn-primary">Message Owner</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+
+{% endblock %}

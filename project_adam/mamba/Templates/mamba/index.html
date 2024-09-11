@@ -1,0 +1,106 @@
+{% extends "mamba/layout.html" %}
+
+{% block content %}
+
+<section>
+<div class="welcome">
+  <img src="https://media.istockphoto.com/id/1473502146/photo/holding-new-car-key.jpg?s=612x612&w=0&k=20&c=-qoW1yO_IHGxApDkHtDapie2WTOdvsREBvEVKrnnjAc=" alt="Smiling driver" role="presentation" aria-hidden="true" >
+</div>
+<div class="first">
+  <h1>Join a fleet</h1>
+  <h4>In Kenya</h4>
+  <p>Get a car and start making money in Nairobi or Mombasa by driving for a fleet in your area.</p>
+  <p>Joining a fleet is a quick and easy way to start driving.</p> 
+  <p> Other options are also available.</p>
+</div>
+</section>
+<div class="head">
+<h1>Fleet benefits</h1>
+</div>
+<section class="second">
+  
+  <div>
+      <i class="fa-solid fa-credit-card fa-bounce fa-2xl"></i>
+      <h4>Pay nothing upfront</h4>
+      <p>Get into a car and start making money.</p>
+      <p>You won't have to put any money down, but you will have to pay ongoing fees to the fleet owner.</p>
+  </div>
+  <div>
+      <i class="fa-solid fa-user-plus fa-bounce fa-2xl"></i>
+      <h4>Easy signup</h4>
+      <p>No need to run a credit check.</p>
+      <p>Just get a car and start making money.</p>
+  </div>
+</section>
+
+<div class="head">
+  <h1>Become a fleet owner</h1>
+</div>
+<section>
+  <div class="third">
+      <h4>Put your cars to work by joining Mamba as a fleet owner.</h4>
+      <p>Simply sign up to get started. Then add your car (or motorbike) in the fleet dashboard,</p>
+      <p>add drivers and manage your fleet.</p>
+      <p>You can make money for every day your drivers work.</p>
+  </div>
+  <div class="welcome">
+      <img src="https://w7.pngwing.com/pngs/814/84/png-transparent-motor-vehicle-car-fleet-management-fleet-vehicle-fleet-management-car-mode-of-transport-vehicle-thumbnail.png" alt="vehicle fleet">
+  </div>
+</section>
+<div class="head">
+  <h1>Register your fleet be it:</h1>
+</div>
+
+<div class="ride">
+  <div class="uber">
+      <div class="auto">
+          <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_84,h_84/v1649914471/assets/89/8e4239-5e7d-4de7-bf71-00cc32d468db/original/Auto-150X150p4x.png" alt="">
+          <div>
+              <h2>TukTuks</h2>
+              <p>Get affordable uber auto ride with no hangling.</p>
+          </div>
+      </div>
+
+      <div class="auto">
+          <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_84,h_84/v1649914539/assets/86/82f8b3-e2e6-45f8-a8f7-fdc511f709e0/original/Moto-150X150p4x.png" alt="">
+          <div>
+              <h2>Boda bodas</h2>
+              <p>Get affordable uber auto ride with no hangling.</p>
+          </div>
+      </div>
+  </div>
+  
+  <div class="uber">
+      <div class="index_models">
+          <img class="index_model3" src="https://img1.cgtrader.com/items/2329019/0b5f8de3f7/large/cartoon-cargo-truck-1-3d-model-low-poly-max-obj-3ds-fbx-c4d.jpg" alt="lorry img">
+          <div>
+              <h2>Lorries</h2>
+              <p>Get affordable uber auto ride with no hangling.</p>
+          </div>
+      </div>
+
+      <div class="index_models">
+          <img class="index_model4" src="https://img.freepik.com/free-vector/isometric-car-icon-isolated-white_107791-128.jpg?size=626&ext=jpg&ga=GA1.2.1413502914.1697241600&semt=ais" alt="car img">
+          <div>
+              <h2>Personal car</h2>
+              <p>Get affordable uber auto ride with no hangling.</p>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="index_last">
+  <div class="index_last1">
+    <h1>Earnings</h1>
+  </div>
+  <div class="index_last2">
+    <h4>In Kenya</h4>
+    <p>The money you make with us depends on you.</p>
+    <p>Our partners get the opportunity to set the rates for each vehicle on their fleet.</p>
+    <p>Payments should be done by the end of every week.</p>
+  </div>
+</div>
+<div class="divider">
+  <a href="{% url 'register' %}"><h2>Become one of our partners</h2></a>
+    <a href="{% url 'register' %}"><i class="fa-solid fa-arrow-right fa-fade fa-2xl"></i> </a>
+</div>
+{% endblock %}

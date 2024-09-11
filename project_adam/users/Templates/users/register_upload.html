@@ -1,0 +1,207 @@
+{% extends "users/base_user.html" %}
+
+{% load static %}
+{% block content %}
+
+<body>
+    <div class="reg_top">
+        <a href="?content_type=default"><i class="fa-solid fa-arrow-left fa-xl"></i></a>
+        <a href="?content_type=default"><h4>Back</h4></a>
+    </div>
+
+    {% if user.is_driver %}
+        {% if content_type %}
+            {% if content_type == 'national_id' %}
+                <div class="reg_center">
+                    <h3>Take a photo of your National ID (front)</h3>
+                    <p>Please upload your document according to the guidelines below</p>
+                    <img src="https://d1a3f4spazzrp4.cloudfront.net/web-onboarding/images/onboarding_sample_images/EMEA/Kenya/national_id_front_kenya.png" alt="id photo example">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <input type="file" id="profile_photo" name="profile_photo">
+                        {% csrf_token %}
+                        {{ form.media }}
+                        {{ form.as_p }}
+                    <button type="submit" class="btn btn-secondary btn-lg btn-block btn-dark">Upload Photo</button></form>
+                </div>
+
+            {% elif content_type == 'profile_photo' %}
+                <div class="reg_center">
+                    <h3>Take your profile photo</h3>
+                    <p>Your profile photo helps people recognize you. Please note that once you submit your profile photo it cannot be changed.</p>
+                    <ol>
+                        <li>Face the camera directly with your eyes and mouth clearly visible</li>
+                        <li>Make sure the photo is well lit, free of glare, and in focus</li>
+                        <li>No photos of a photo, filters, or alterations</li>
+                    </ol>
+                    <img src="https://content.assets.pressassociation.io/2019/09/18155749/7bf9c99d-2b1a-47b4-8a55-a55fb4a730c6.jpg" alt="sample profile photo">
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="file" id="profile_photo" name="profile_photo">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    <button type="submit" class="btn btn-secondary btn-lg btn-block btn-dark">Upload Photo</button></form>
+                </div>
+                
+            {% elif content_type == 'driving_license' %}
+                <div class="reg_center">
+                    <h3>Take a photo of your Driving License</h3>
+                    <p>Please upload your document according to the guidelines below</p>
+                    <img src="https://d1a3f4spazzrp4.cloudfront.net/web-onboarding/images/onboarding_sample_images/EMEA/Kenya/regular_(non-psv)_driving_license_kenya.png" alt="Driving license sample">
+                    <div class="form-group">
+                        <form method="POST" enctype="multipart/form-data">
+                        <input type="file" id="profile_photo" name="profile_photo">
+                        {% csrf_token %}
+                        {{ form.media }}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block btn-dark">Upload Photo</button></form>
+                    </div>
+                </div>
+            
+            {% elif content_type == 'default' %}
+                <div id="welcome_reg" class="welcome_reg">
+                    <div>
+                        <img class="welcome_reg_img" src="https://azavista-web.ams3.digitaloceanspaces.com/assets/df9973b2f3eab8e5087cf4ee5975d452.svg" alt="registration image">
+                    </div >
+                    <div class="reg_center_content" >
+                        <h2>Welcome, {{ user.username }}</h2>
+                        <p>Here's what you need to do to set up your account:</p>
+                        <ul>
+                            <a class="reg_center_links" href="?content_type=national_id">Take a photo of your National ID (front)</a>
+                            <a class="reg_center_links" href="?content_type=profile_photo">Take your profile photo</a>
+                            <a class="reg_center_links" href="?content_type=driving_license">Take a photo of your Driving License</a>
+                        </ul>          
+                    </div>
+                </div>
+            {% endif %}
+        {% else%}
+            <div id="welcome_reg" class="welcome_reg">
+                <div>
+                    <img class="welcome_reg_img" src="https://azavista-web.ams3.digitaloceanspaces.com/assets/df9973b2f3eab8e5087cf4ee5975d452.svg" alt="registration image">
+                </div >
+                <div class="reg_center_content" >
+                    <h2>Welcome, {{ user.username }}</h2>
+                    <p>Here's what you need to do to set up your account:</p>
+                    <ul>
+                        <a class="reg_center_links" href="?content_type=national_id">Take a photo of your National ID (front)</a>
+                        <a class="reg_center_links" href="?content_type=profile_photo">Take your profile photo</a>
+                        <a class="reg_center_links" href="?content_type=driving_license">Take a photo of your Driving License</a>
+                    </ul>          
+                </div>
+            </div>    
+        {% endif %}  
+    {% endif %}        
+    {% if user.is_fleetowner %}
+
+        {% if content_type %}
+            {% if content_type == 'log book' %}
+                <div class="reg_center">
+                    <h3>Take a photo of Motor vehicle registration log book</h3>
+                    <p>Please upload your document according to the guidelines below</p>
+                    <img src="https://kenyanlist.com/attachments/tmp-cam-3753152152344070420-jpg.1071/" alt="Motor vehicle registration book example">
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="file" id="profile_photo" name="profile_photo">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    <button type="submit" class="btn btn-secondary btn-lg btn-block btn-dark">Upload Photo</button></form>
+                </div>
+
+                {% elif content_type == 'profile_photo' %}
+                    <div class="reg_center">
+                        <h3>Take your profile photo</h3>
+                        <p>Your profile photo helps people recognize you. Please note that once you submit your profile photo it cannot be changed.</p>
+                        <ol>
+                            <li>Face the camera directly with your eyes and mouth clearly visible</li>
+                            <li>Make sure the photo is well lit, free of glare, and in focus</li>
+                            <li>No photos of a photo, filters, or alterations</li>
+                        </ol>
+                        <img src="https://content.assets.pressassociation.io/2019/09/18155749/7bf9c99d-2b1a-47b4-8a55-a55fb4a730c6.jpg" alt="sample profile photo">
+                        <form method="POST" enctype="multipart/form-data">
+                            <input type="file" id="profile_photo" name="profile_photo">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block btn-dark">Upload Photo</button></form>
+                    </div>
+
+                {% elif content_type == 'insurance' %}
+                    <div class="reg_center">
+                        <h3>Take a photo of your PSV insurance</h3>
+                        <p>Please upload your document according to the guidelines below</p>
+                        <img src="https://pictures-kenya.jijistatic.com/48831150_MzAwLTMwMS00MDZkMDVhZGJj.jpg" alt="PSV insurance sample">
+                        <form method="POST" enctype="multipart/form-data">
+                            <input type="file" id="profile_photo" name="profile_photo">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block btn-dark">Upload Photo</button></form>
+                    </div>
+
+                    {% elif content_type == 'inspection_report' %}
+                    <div class="reg_center">
+                        <h3>Take a photo of your Vehicle inspection report</h3>
+                        <p>Please upload your document according to the guidelines below</p>
+                        <img src="https://i.pinimg.com/originals/d3/e3/40/d3e3400a7be224abd7a19993c6d135ad.png" alt="Vehicle inspection report">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block btn-dark">Upload Photo</button></form>
+                    </div>
+                {% elif content_type == 'national_id' %}
+                        <div class="reg_center">
+                            <h3>Take a photo of your National ID (front)</h3>
+                            <p>Please upload your document according to the guidelines below</p>
+                            <img src="https://d1a3f4spazzrp4.cloudfront.net/web-onboarding/images/onboarding_sample_images/EMEA/Kenya/national_id_front_kenya.png" alt="id photo example">
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                            <button type="submit" class="btn btn-secondary btn-lg btn-block btn-dark">Upload Photo</button></form>
+                        </div>
+
+            {% elif content_type == 'default' %}
+                <div id="welcome_reg" class="welcome_reg">
+                    <div>
+                        <img class="welcome_reg_img" src="https://azavista-web.ams3.digitaloceanspaces.com/assets/df9973b2f3eab8e5087cf4ee5975d452.svg" alt="registration image">
+                    </div >
+                    <div class="reg_center_content" >
+                        <h2>Welcome, {{ user.username }}</h2>
+                        <p>Here's what you need to do to set up your account:</p>
+                        <ul>
+                            <a class="reg_center_links" href="?content_type=national_id">Take a photo of your National ID (front)</a>
+                            <a class="reg_center_links" href="?content_type=profile_photo">Take your profile photo</a>
+                            <a class="reg_center_links" href="?content_type=driving_license">Take a photo of your Driving License</a>
+                        </ul>          
+                    </div>
+                </div>
+            {% endif %}           
+        {% else%}
+            <div id="welcome_reg" class="welcome_reg">
+                <div>
+                    <img class="welcome_reg_img" src="https://azavista-web.ams3.digitaloceanspaces.com/assets/df9973b2f3eab8e5087cf4ee5975d452.svg" alt="registration image">
+                </div >
+                <div class="reg_center_content" >
+                    <h2>Welcome, {{ user.username }}</h2>
+                    <p>Here's what you need to do to set up your account:</p>
+                    <ul>
+                        <a class="reg_center_links" href="?content_type=national_id">Take a photo of your National ID (front)</a>
+                        <a class="reg_center_links" href="?content_type=profile_photo">Take your profile photo</a>
+                        <a class="reg_center_links" href="?content_type=driving_license">Take a photo of your Driving License</a>
+                    </ul>          
+                </div>
+            </div> 
+        {% endif %}
+    {% endif %}
+    
+    
+</body>
+
+    {% if scroll_to %}
+    <script>
+        // JavaScript to scroll to a specific element
+        document.addEventListener("DOMContentLoaded", function() {
+            var element = document.querySelector('{{ scroll_to }}');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    </script>
+    {% endif %}
+
+
+{% endblock %}
